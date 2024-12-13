@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-<h2>HTML Image</h2>
-<img src="../Images/girl.png" alt="Girl Image" width="200" height="250">
-
-</body>
+    <head>
+        <title>Html Images</title>
+        <style>
+            /* set width to 100% of all images */
+            img{
+                width: 100%;
+            }
+        </style>
+    </head>
+  <body>
+    <h1>HTML Image</h1>
+        <!-- style in the head can override width without style attribute -->
+    <img src="../Images/girl.png" alt="Girl Image" width="200" height="250" />
+    <br />
+    <h2>Style attribute</h2>
+    <!-- style in the head can not override width because of style attribute -->
+    <img src="../Images/girl.png" alt="Girl Image" style="width: 200px;height: 250px;" />
+  </body>
 </html>
-
