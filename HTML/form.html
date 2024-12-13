@@ -6,10 +6,13 @@
   <body>
     <h1>HTML Form</h1>
     <form onsubmit="handleSubmit()">
-      <label for="username">Username</label><br />
-      <input type="text" name="username" id="username" required /><br /><br />
-      <label for="dob">Date of birth</label><br />
-      <input type="date" name="dob" id="dob" required /><br />
+      <fieldset style="width: 25%">
+        <legend>Personal Info</legend>
+        <label for="username">Username</label><br />
+        <input type="text" name="username" id="username" required /><br /><br />
+        <label for="dob">Date of birth</label><br />
+        <input type="date" name="dob" id="dob" required /><br />
+      </fieldset>
       <p>Choose your favourite Language:</p>
       <input type="radio" name="favLang" id="html" value="HTML" />
       <label for="html">HTML</label><br />
@@ -30,7 +33,16 @@
         <option value="fiat">Fiat</option>
         <option value="audi">Audi</option>
       </select>
-      <br /><br />
+      <br />
+      <label for="browsers">Choose your browser:</label><br />
+      <input list="browsers" name="browser" />
+      <datalist id="browsers">
+        <option value="chrome"></option>
+        <option value="edge"></option>
+        <option value="firefox"></option>
+      </datalist>
+
+      <br />
       <label for="about">Write about yourself</label><br />
       <textarea
         name="about"
