@@ -10,8 +10,18 @@
 <map name="workmap">
   <area shape="rect" coords="34,44,270,350" alt="Computer" href="../Images/mac.jpg">
   <area shape="rect" coords="290,172,333,250" alt="Phone" href="../Images/cellphone.jpg">
-  <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="../Images/coffeehouse2.jpg">
+  <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="../Images/coffeehouse2.jpg" onclick="myFunction()">
 </map>
+
+<p>Click on the cup of coffee to execute a JavaScript function:</p>
+
+<script>
+function myFunction() {
+  alert("You clicked the coffee cup!");
+}
+</script>
+
+
 
 </body>
 </html>
