@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Html Images</title>
-        <style>
-            /* set width to 100% of all images */
-            img{
-                width: 100%;
-            }
-        </style>
-    </head>
+  <head>
+    <title>Html Images</title>
+    <style>
+      /* set width to 100% of all images */
+      img {
+        width: 100%;
+      }
+    </style>
+  </head>
   <body>
     <h1>HTML Image</h1>
-        <!-- style in the head can override width without style attribute -->
+    <!-- style in the head can override width without style attribute -->
     <img src="../Images/girl.png" alt="Girl Image" width="200" height="250" />
     <br />
     <h2>Style attribute</h2>
     <!-- style in the head can not override width because of style attribute -->
-    <img src="../Images/girl.png" alt="Girl Image" style="width: 200px;height: 250px;" />
+    <img
+      src="../Images/girl.png"
+      alt="Girl Image"
+      style="width: 200px; height: 250px"
+    />
     <br />
     <h2>Animated Images</h2>
+    <img
+      src="../Images/programming.gif"
+      alt="Computer man"
+      style="width: 48px; height: 48px"
+    />
+    <br />
+    <h2>Image Floating</h2>
+    <p>
+      <img src="../Images/programming.gif" alt="Computer man"" style="float:
+      right; width: 42px; height: 42px" /> A paragraph with a floating image. A
+      paragraph with a floating image. A paragraph with a floating image.A
+      paragraph with a floating image. A paragraph with a floating image. A
+      paragraph with a floating image.
+    </p>
 
-    <img src="../Images/programming.gif" alt="Computer man" style="width:48px;height:48px;">
-
+    <p>
+      <img
+        src="../Images/programming.gif"
+        alt="Computer man"
+        style="float: left; width: 42px; height: 42px"
+      />
+      A paragraph with a floating image. A paragraph with a floating image. A
+      paragraph with a floating image.A paragraph with a floating image. A
+      paragraph with a floating image. A paragraph with a floating image.
+    </p>
   </body>
 </html>
