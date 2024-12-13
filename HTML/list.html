@@ -2,23 +2,40 @@
 <html lang="en">
   <head>
     <title>HTML Lists</title>
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: black;
+        width: 24%;
+      }
+      ul li {
+        float: left;
+      }
+      ul li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+      }
+      ul li a:hover {
+        background-color: grey;
+      }
+    </style>
   </head>
   <body>
     <h1>HTML Lists</h1>
-    <br />
     <h2>Unordered List</h2>
     <ul>
-      <li style="list-style-type: square">
-        Item 1
-        <ul>
-          <li>Item 1-1</li>
-          <li>Item 1-2</li>
-        </ul>
-      </li>
-      <li style="list-style-type: disc">Item 2</li>
-      <li style="list-style-type: circle">Item 3</li>
-      <li style="list-style-type: none">Item 4</li>
+      <li><a href="#item1">Item 1</a></li>
+      <li><a href="#item2">Item 2</a></li>
+      <li><a href="#item3">Item 3</a></li>
+      <li><a href="#item4">Item 4</a></li>
     </ul>
+    <br />
     <h2>Ordered List</h2>
     <ol>
       <li>Item 1</li>
