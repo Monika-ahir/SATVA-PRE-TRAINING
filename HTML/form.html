@@ -5,7 +5,10 @@
   </head>
   <body>
     <h1>HTML Form</h1>
-    <form onsubmit="handleSubmit()">
+    <form
+      onsubmit="handleSubmit()"
+      oninput="x.value=parseInt(a.value)+parseInt(b.value)"
+    >
       <fieldset style="width: 25%">
         <legend>Personal Info</legend>
         <label for="username">Username</label><br />
@@ -41,7 +44,13 @@
         <option value="edge"></option>
         <option value="firefox"></option>
       </datalist>
-
+      <br />
+      0
+      <input type="range" id="a" name="a" value="50" />
+      100 +
+      <input type="number" id="b" name="b" value="50" />
+      =
+      <output name="x" for="a b"></output>
       <br />
       <label for="about">Write about yourself</label><br />
       <textarea
