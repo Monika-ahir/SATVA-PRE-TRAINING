@@ -14,24 +14,36 @@
         text-align: left;
         padding: 8px;
       }
+      th:nth-child(odd),
+      td:nth-child(odd) {
+        border: #dddddd;
+      }
+      tr:hover {
+        background-color: #9f9898;
+      }
     </style>
   </head>
   <body>
     <h2>HTML Table</h2>
 
     <table>
+      <colgroup>
+        <col span="2" style="background-color: #d6eeee" />
+      </colgroup>
       <tr>
-        <th colspan="2">Company and contact</th>
+        <th>Company</th>
+        <th>Contact</th>
         <th>Country</th>
       </tr>
       <tr>
         <td>Alfreds Futterkiste</td>
         <td>Maria Anders</td>
-        <td rowspan="2">Germany</td>
+        <td>Germany</td>
       </tr>
       <tr>
         <td>Centro comercial Moctezuma</td>
         <td>Francisco Chang</td>
+        <td>Mexico</td>
       </tr>
       <tr>
         <td>Ernst Handel</td>
