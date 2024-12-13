@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Form</title>
+  </head>
+  <body>
+    <h1>HTML Form</h1>
+    <form onsubmit="handleSubmit()">
+      <label for="username">Username</label><br />
+      <input type="text" name="username" id="username" required /><br /><br />
+      <label for="dob">Date of birth</label><br />
+      <input type="date" name="dob" id="dob" required /><br />
+      <p>Choose your favourite Language:</p>
+      <input type="radio" name="favLang" id="html" value="HTML" />
+      <label for="html">HTML</label><br />
+      <input type="radio" name="favLang" id="css" value="CSS" />
+      <label for="css">CSS</label><br />
+      <input type="radio" name="favLang" id="js" value="JAVASCRIPT" />
+      <label for="js">JAVASCRIPT</label><br /><br />
+      <label for="device">Devices you own:</label><br />
+      <input type="checkbox" name="device" id="laptop" />
+      <label for="laptop">Laptop</label><br />
+      <input type="checkbox" name="device" id="mobile" />
+      <label for="mobile">Mobile</label><br />
+      <input type="checkbox" name="device" id="device" />
+      <label for="tablet">Tablet</label><br /><br />
+      <input type="submit" value="submit" />
+    </form>
+
+    <script>
+      function handleSubmit() {
+        alert("Data Submitted Successfully..");
+      }
+    </script>
+  </body>
+</html>
