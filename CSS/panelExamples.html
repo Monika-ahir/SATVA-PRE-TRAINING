@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel examples</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body>
+    <div class="w3-container">
+      <h2>Panels for Notes</h2>
+      <div class="w3-panel w3-pale-green">
+        <p>This is note</p>
+      </div>
+      <h2>Panels for Quotes</h2>
+      <div class="w3-panel w3-sand w3-xxsmall w3-serif">
+        <p><i>"This is Quote."</i></p>
+      </div>
+      <h2>Panels for Danger</h2>
+      <div id="id01" class="w3-panel w3-red w3-display-container">
+        <span
+          class="w3-button w3-red w3-large w3-display-topright"
+          onclick="this.parentElement.style.display='none'"
+          >x</span
+        >
+        <p>This is danger!</p>
+      </div>
+      <button
+        class="w3-btn"
+        onclick="document.getElementById('id01').style.display='block'"
+      >
+        Show panel
+      </button>
+      <h2>Panels for Card</h2>
+      <div class="w3-panel w3-blue w3-card-4">
+        <p>This is card</p>
+      </div>
+    </div>
+  </body>
+</html>
