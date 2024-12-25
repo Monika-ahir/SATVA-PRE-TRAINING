@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Modal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body>
+    <div class="w3-container">
+      <h2>Modal</h2>
+      <button
+        onclick="document.getElementById('id01').style.display='block'"
+        class="w3-button w3-black"
+      >
+        Submit
+      </button>
+
+      <div id="id01" class="w3-modal">
+        <div
+          class="w3-modal-content w3-card-4 w3-padding-16 w3-animate-top"
+          style="width: 400px"
+        >
+          <div class="w3-container">
+            <span
+              onclick="document.getElementById('id01').style.display='none'"
+              class="w3-button w3-display-topright"
+              >&times;</span
+            >
+            <p>Data submitted successfully..</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
