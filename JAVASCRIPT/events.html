@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Events</title>
+  </head>
+  <body onload="displayDate('demo3')">
+    <h1>JavaScript HTML Events</h1>
+
+    <h2>The onclick Attribute</h2>
+    <button onclick="displayDate('demo1')">The time is?</button>
+    <p id="demo1"></p>
+
+    <h2>The onmouseover Attribute</h2>
+    <button onmouseover="displayDate('demo2')" onmouseout="hideDate()">
+      The time is?
+    </button>
+    <p id="demo2"></p>
+
+    <h2>The onload Attribute</h2>
+    <p>The time is?</p>
+    <p id="demo3"></p>
+
+    <h2>The onchange Attribute</h2>
+    <label for="text">Input</label><br />
+    <input type="text" name="text" id="myInput" onchange="textChange()" />
+    <p id="demo4"></p>
+
+    <script>
+      function displayDate(id) {
+        document.getElementById(id).innerHTML = Date();
+      }
+      function hideDate() {
+        document.getElementById("demo2").innerHTML = "";
+      }
+      function textChange() {
+        document.getElementById("demo4").innerHTML = "Input changed";
+      }
+    </script>
+  </body>
+</html>
