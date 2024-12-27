@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Traversing</title>
+    <style>
+      #box {
+        width: 200px;
+        height: 100px;
+        background-color: lightblue;
+        margin: 20px auto;
+        text-align: center;
+        line-height: 100px;
+        font-size: 18px;
+        position: relative;
+      }
+      button {
+        margin: 5px;
+      }
+      #parent {
+        width: 300px;
+        height: 300px;
+        background-color: lightgreen;
+        text-align: center;
+        line-height: 300px;
+      }
+      .sibling {
+        width: 100px;
+        height: 100px;
+        background-color: lightcoral;
+        margin: 10px;
+        display: inline-block;
+        text-align: center;
+        line-height: 100px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jQuery Concepts Demo</h1>
+
+    <div id="parent">
+      Parent
+      <div id="box">Hello Box</div>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br />
+
+    <div class="sibling">Sibling 1</div>
+    <div class="sibling">Sibling 2</div>
+    <div class="sibling">Sibling 3</div>
+
+    <button id="dimensions">Get Dimensions</button>
+    <button id="traverse-ancestors">Traverse Ancestors</button>
+    <button id="traverse-descendants">Traverse Descendants</button>
+    <button id="traverse-siblings">Traverse Siblings</button>
+    <button id="filter">Filter</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //jQuery Dimensions
+        $("#dimensions").click(function () {
+          const width = $("#box").width();
+          const height = $("#box").height();
+          alert("Box Dimensions - Width: " + width + ", Height: " + height);
+        });
+
+        //Traversing Ancestors
+        $("#traverse-ancestors").click(function () {
+          const ancestors = $("#box").parents();
+          alert("Ancestors of #box: " + ancestors.length);
+        });
+
+        //Traversing Descendants
+        $("#traverse-descendants").click(function () {
+          const descendants = $("#parent").find("#box");
+          alert("Descendants of #parent (box): " + descendants.length);
+        });
+
+        //Traversing Siblings
+        $("#traverse-siblings").click(function () {
+          const siblings = $("#box").siblings(".sibling");
+          alert("Siblings of #box (with class 'sibling'): " + siblings.length);
+        });
+
+        //Filtering
+        $("#filter").click(function () {
+          const filtered = $(".sibling").filter(":contains('2')");
+          alert("Filtered Sibling containing '2': " + filtered.text());
+        });
+      });
+    </script>
+  </body>
+</html>
