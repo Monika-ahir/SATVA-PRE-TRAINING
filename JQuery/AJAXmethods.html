@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery AJAX Methods</title>
+    <style>
+      #result {
+        width: 100%;
+        padding: 20px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+      }
+      button {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jQuery AJAX Methods Demo</h1>
+
+    <button id="load">Load Content</button>
+    <button id="get">Get Data</button>
+    <button id="post">Post Data</button>
+
+    <div id="result"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // load() Method
+        $("#load").click(function () {
+          $("#result").load("content.txt", function (response, status, xhr) {
+            if (status == "error") {
+              $("#result").html("Error: " + xhr.status + " " + xhr.statusText);
+            } else {
+              $("#result").html(response);
+            }
+          });
+        });
+
+        // get() Method
+        $("#get").click(function () {
+          $.get(
+            "https://jsonplaceholder.typicode.com/posts/1",
+            function (data) {
+              const post = `<h3>${data.title}</h3><p>${data.body}</p>`;
+              $("#result").html(post);
+            }
+          );
+        });
+
+        //post() Method
+        $("#post").click(function () {
+          const postData = {
+            title: "This is title",
+            body: "this is content",
+            userId: 1,
+          };
+
+          $.post(
+            "https://jsonplaceholder.typicode.com/posts",
+            postData,
+            function (data) {
+              // Display the response after posting data
+              const response = `<h3>Response Data:</h3><p>Title: ${data.title}</p><p>Body: ${data.body}</p>`;
+              $("#result").html(response);
+            }
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
