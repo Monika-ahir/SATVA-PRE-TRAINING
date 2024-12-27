@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Events Example</title>
+    <style>
+      #hover-box {
+        width: 200px;
+        height: 100px;
+        background-color: lightblue;
+        text-align: center;
+        line-height: 100px;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jQuery Events Demo</h1>
+    <button id="click-button">Click Me</button>
+    <input type="text" id="input-field" placeholder="Type something..." />
+    <div id="hover-box">Hover over me</div>
+    <button id="dblclick-button">Double Click Me</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Click event
+        $("#click-button").click(function () {
+          alert("Button clicked!");
+        });
+
+        // Keyup event
+        $("#input-field").keyup(function () {
+          alert("Key pressed: " + $(this).val());
+        });
+
+        // Hover event
+        $("#hover-box").hover(
+          function () {
+            $(this).text("Mouse Entered");
+          },
+          function () {
+            $(this).text("Hover over me");
+          }
+        );
+
+        // Double-click event
+        $("#dblclick-button").dblclick(function () {
+          alert("Button double-clicked!");
+        });
+      });
+    </script>
+  </body>
+</html>
