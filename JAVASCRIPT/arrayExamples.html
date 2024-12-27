@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Arrays</title>
+  </head>
+  <body>
+    <h1>JavaScript Array Examples</h1>
+    <div id="output"></div>
+
+    <script>
+      let output = "";
+
+      // Create Array
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      output += "<b>Original Array:</b> " + fruits.join(", ") + "<br>";
+
+      // Change Element
+      fruits[1] = "Lemon";
+      output += "<b>After Changing Element:</b> " + fruits.join(", ") + "<br>";
+
+      // Access First and Last Element
+      let firstFruit = fruits[0];
+      let lastFruit = fruits[fruits.length - 1];
+      output += "<b>First Element:</b> " + firstFruit + "<br>";
+      output += "<b>Last Element:</b> " + lastFruit + "<br>";
+
+      // Loop with forEach
+      output += "<b>Array Elements using forEach:</b><br>";
+      fruits.forEach(function (fruit, index) {
+        output += "Index " + index + ": " + fruit + "<br>";
+      });
+
+      // Add Element
+      fruits.push("Pineapple");
+      output += "<b>After Adding Element:</b> " + fruits.join(", ") + "<br>";
+
+      // Remove Element
+      let removedFruit = fruits.pop();
+      output += "<b>Removed Element:</b> " + removedFruit + "<br>";
+      output +=
+        "<b>After Removing Last Element:</b> " + fruits.join(", ") + "<br>";
+
+      // Check if Array
+      let isArrayCheck = Array.isArray(fruits);
+      output += "<b>Is fruits an Array?:</b> " + isArrayCheck + "<br>";
+
+      // Nested Arrays
+      const myObj = {
+        name: "John",
+        age: 30,
+        cars: [
+          { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+          { name: "BMW", models: ["320", "X3", "X5"] },
+        ],
+      };
+
+      output += "<b>Cars and Models:</b><br>";
+      myObj.cars.forEach(function (car) {
+        output += "<b>Car Name:</b> " + car.name + "<br>";
+        output += "<b>Models:</b> " + car.models.join(", ") + "<br>";
+      });
+
+      // Nested Array
+      const numbers = [1, [2, 3, 4], 5];
+      output += "<b>Nested Array:</b> " + numbers.join(", ") + "<br>";
+      output += "<b>Access Nested Element:</b> " + numbers[1][2] + "<br>";
+
+      // Display Output
+      document.getElementById("output").innerHTML = output;
+    </script>
+  </body>
+</html>
