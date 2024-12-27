@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Date Object</title>
+  </head>
+  <body>
+    <h1>JavaScript Date Examples</h1>
+    <div id="output"></div>
+
+    <script>
+      let output = "";
+
+      // Current date
+      const currentDate = new Date();
+      output += "Current Date: " + currentDate + "<br><br>";
+
+      // Date from string
+      const dateFromString = new Date("2022-03-25");
+      output += "Date from String: " + dateFromString + "<br><br>";
+
+      // Year and month only
+      const dateWithYearMonth = new Date(2024, 11);
+      output += "Year and Month: " + dateWithYearMonth + "<br><br>";
+
+      // Full date and time
+      const fullDateTime = new Date(2018, 11, 24, 10, 33, 30);
+      output += "Full Date and Time: " + fullDateTime + "<br><br>";
+
+      // Overflow month
+      const overflowMonth = new Date(2018, 15, 24, 10, 33, 30);
+      output += "Overflow Month: " + overflowMonth + "<br><br>";
+
+      // Overflow day
+      const overflowDay = new Date(2018, 5, 35, 10, 33, 30);
+      output += "Overflow Day: " + overflowDay + "<br><br>";
+
+      // Previous century
+      const previousCentury = new Date(99, 11, 24);
+      output += "Previous Century: " + previousCentury + "<br><br>";
+
+      document.getElementById("output").innerHTML = output;
+    </script>
+  </body>
+</html>
