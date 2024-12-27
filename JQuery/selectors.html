@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Selectors Example</title>
+  </head>
+  <body>
+    <h2>jQuery Selectors</h2>
+    <br />
+    <button id="id01">Click Me (ID Selector)</button>
+    <button class="id02">Click Me (Class Selector)</button>
+    <button>Click Me (Element Selector)</button>g
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // ID selector
+        $("#id01").click(function () {
+          alert("ID Selector clicked!");
+        });
+
+        // Class selector
+        $(".id02").click(function () {
+          alert("Class Selector clicked!");
+        });
+
+        // Element selector
+        $("button").click(function () {
+          alert("Element Selector clicked!");
+          $(this).css("color", "red"); // 'this' selector
+        });
+      });
+    </script>
+  </body>
+</html>
