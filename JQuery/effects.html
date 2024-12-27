@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Effects</title>
+    <style>
+      #box {
+        width: 200px;
+        height: 100px;
+        background-color: lightblue;
+        margin: 20px auto;
+        text-align: center;
+        line-height: 100px;
+        font-size: 18px;
+        position: relative;
+      }
+      button {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jQuery Effects Demo</h1>
+    <div id="box">Hello Box</div>
+    <button id="hide-show">Hide/Show</button>
+    <button id="fade-in-out">Fade In/Out</button>
+    <button id="slide-up-down">Slide Up/Down</button>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="stop2">Stop all</button>
+    <button id="stop3">Stop but finish</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Hide/Show
+        $("#hide-show").click(function () {
+          $("#box").toggle();
+        });
+
+        // Fade In/Out
+        $("#fade-in-out").click(function () {
+          $("#box").fadeToggle("slow");
+        });
+
+        // Slide Up/Down
+        $("#slide-up-down").click(function () {
+          $("#box").slideToggle("slow");
+        });
+
+        // Animate
+        $("#start").click(function () {
+          $("#box").animate({ left: "100px" }, 5000);
+          $("#box").animate({ fontSize: "3em" }, 5000);
+        });
+
+        $("#stop").click(function () {
+          $("#box").stop();
+        });
+
+        $("#stop2").click(function () {
+          $("#box").stop(true);
+        });
+
+        $("#stop3").click(function () {
+          $("#box").stop(true, true);
+        });
+      });
+    </script>
+  </body>
+</html>
