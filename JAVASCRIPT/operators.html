@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Operators</title>
+  </head>
+  <body>
+    <h2>JavaScript Operator</h2>
+    <p id="demo"></p>
+
+    <script>
+      let x = 10; //assignment op
+      let y = 5;
+      let a = x + y; //addition op
+      let b = x - y; //subtraction op
+      let c = x * y; //multiplication op
+      let d = x / y; //division op
+      let e = x > y ? x : y; // > comparison op and ? : is ternary op
+      let f = x >> y; //shift op
+      document.getElementById("demo").innerHTML =
+        "Values: x=" +
+        x +
+        " " +
+        "y=" +
+        y +
+        "<br>Addition: " +
+        a +
+        "<br>Subtraction: " +
+        b +
+        "<br>Multiplication: " +
+        c +
+        "<br>Division: " +
+        d +
+        "<br>Ternary (greater value): " +
+        e +
+        "<br>Shift operator result: " +
+        f;
+    </script>
+  </body>
+</html>
